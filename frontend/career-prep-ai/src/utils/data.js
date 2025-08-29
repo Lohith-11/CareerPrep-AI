@@ -1,32 +1,32 @@
 export const APP_FEATURES = [
   {
     id: "01",
-    title: "Personalized for Your Journey",
+    title: "Intelligent Role Adaptation",
     description:
-      "Receive AI-curated questions and answers tailored to your role, experience level, and areas of focus — no one-size-fits-all practice.",
+      "Experience personalized interview simulations that dynamically adjust to your specific industry, seniority level, and career aspirations—delivering precision-crafted preparation.",
   },
   {
     id: "02",
-    title: "Flexible, Self-Paced Learning",
+    title: "Progressive Learning Architecture",
     description:
-      "Control your flow — expand answers only when ready and explore concepts in depth with AI-powered explanations at a click.",
+      "Navigate through adaptive learning pathways where complexity unfolds naturally—explore fundamental concepts before advancing to sophisticated technical challenges.",
   },
   {
     id: "03",
-    title: "Organize Your Thoughts",
+    title: "Strategic Knowledge Management",
     description:
-      "Attach personal notes to questions and pin key ones to the top — keeping your learning structured and effective.",
+      "Curate your learning journey with intelligent bookmarking, customizable study collections, and priority-based question organization—transforming chaos into clarity.",
   },
   {
     id: "04",
-    title: "Grasp the Logic Behind Answers",
+    title: "Deep Conceptual Analysis",
     description:
-      "Go beyond memorization — access AI-generated breakdowns that explain concepts clearly, ensuring lasting understanding.",
+      "Unlock comprehensive understanding through multi-layered explanations, algorithmic breakdowns, and real-world application insights—building expertise beyond surface knowledge.",
   },
   {
     id: "05",
-    title: "Save, Structure, and Resume Anytime",
+    title: "Continuous Progress Orchestration",
     description:
-      "Store your practice sets, keep them neatly organized in your dashboard, and continue right from where you paused.",
+      "Maintain momentum with sophisticated session management, cross-device synchronization, and intelligent resume functionality—ensuring seamless preparation continuity.",
   },
 ];
