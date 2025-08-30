@@ -1,4 +1,4 @@
-  import React, { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Inputs/Input";
 import { validateEmail } from "../../utils/helper";
@@ -43,10 +43,10 @@ const Login = ({ setCurrentPage }) => {
 
   return (
     <div className="w-[90vw] md:w-[33w] p-7 flex flex-col justify-center">
-      <h3 className="text-lg font-semibold text-slate-800 font-['Poppins']">
+      <h3 className="text-lg font-semibold text-black">
         Welcome Back
       </h3>
-      <p className="text-xs text-slate-600 mt-[5px] mb-6">
+      <p className="text-xs text-slate-700 mt-[5px] mb-6">
         Please enter your credentials to continue.
       </p>
 
@@ -70,10 +70,10 @@ const Login = ({ setCurrentPage }) => {
         <button type="submit" className="btn-primary">
           LOGIN
         </button>
-        <p className="text-[13px] text-slate-700 mt-3">
+        <p className="text-[13px] text-slate-800 mt-3">
           Don't have an account?{" "}
           <button
-            className="font-medium text-indigo-600 underline cursor-pointer hover:text-indigo-700"
+            className="font-medium text-primary underline cursor-pointer"
             type="button"
             onClick={() => {
               setCurrentPage("signup");

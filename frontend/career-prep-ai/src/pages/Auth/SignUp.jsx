@@ -52,10 +52,10 @@ const SignUp = ({ setCurrentPage }) => {
   };
   return (
     <div className="w-[90vw] md:w-[33w] p-7 flex flex-col justify-center">
-      <h3 className="text-lg font-semibold text-slate-800 font-['Poppins']">
+      <h3 className="text-lg font-semibold text-black">
         Create an Account
       </h3>
-      <p className="text-xs text-slate-600 mt-[5px] mb-6">
+      <p className="text-xs text-slate-700 mt-[5px] mb-6">
         Join us today by entering your details below.
       </p>
 
@@ -72,7 +72,7 @@ const SignUp = ({ setCurrentPage }) => {
           <Input
             value={email}
             onChange={({ target }) => setEmail(target.value)}
-            label="Email"
+            label="Email Address"
             placeholder="john@example.com"
             type="text"
           />
@@ -88,10 +88,10 @@ const SignUp = ({ setCurrentPage }) => {
         <button type="submit" className="btn-primary">
           SIGN UP
         </button>
-        <p className="text-[13px] text-slate-700 mt-3">
+        <p className="text-[13px] text-slate-800 mt-3">
           Already have an account?{" "}
           <button
-            className="font-medium text-indigo-600 underline cursor-pointer hover:text-indigo-700"
+            className="font-medium text-pimary underline cursor-pointer"
             onClick={() => setCurrentPage("login")}
           >
             Login
