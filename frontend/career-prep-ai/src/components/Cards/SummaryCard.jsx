@@ -52,12 +52,12 @@ const SummaryCard = ({
       <div className="px-3 pb-3">
         <div className="flex items-center gap-3 mt-4">
           <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">
-            Experience:{experience} {experience > 1 ? "Years" : "Year"}
+            Experience: {experience} {experience > 1 ? "Years" : "Year"}
           </div>
 
           <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">{questions} Q&A</div>
 
-          <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">Last Updated:{lastUpdated}</div>
+          <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">Last Updated: {lastUpdated}</div>
         </div>
 
         {/* Description */}
