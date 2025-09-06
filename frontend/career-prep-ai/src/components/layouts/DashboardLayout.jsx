@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }) => {
   return (
     <div>
       <Navbar />
-      {user && <div>{children}</div>}
+      {user && <div className="px-4">{children}</div>}
     </div>
   );
 };
