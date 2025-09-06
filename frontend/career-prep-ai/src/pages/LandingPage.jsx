@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/userContext";
 import ProfileInfoCard from "../components/Cards/ProfileInfoCard";
 import MarqueeDemo from "../components/MarqueeDemo";
+import AnimatedGradientTextDemo from "../components/AnimatedGradientTextDemo";
 
 const LandingPage = () => {
   const { user } = useContext(UserContext);
@@ -53,9 +54,9 @@ const LandingPage = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
               <div className="flex items-center justify-left mb-2">
-                <div className="flex items-center gap-2 text-[13px] text-amber-600 font-semibold bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
-                  <LuSparkles /> AI Powered
-                </div>
+                <div>
+                  <AnimatedGradientTextDemo/>
+                </div> 
               </div>
               <h1 className="text-5xl text-black font-medium mb-6 leading-tight">
                 Ace Interviews with <br />

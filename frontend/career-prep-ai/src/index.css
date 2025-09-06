@@ -119,6 +119,18 @@
   .animate-marquee-reverse {
     animation: marquee-reverse var(--duration) linear infinite;
   }
+
+  /* Gradient text animation */
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+
+  .animate-gradient {
+    animation: gradient 8s linear infinite;
+    --bg-size: 400%;
+  }
 }
 
 .input-box {
