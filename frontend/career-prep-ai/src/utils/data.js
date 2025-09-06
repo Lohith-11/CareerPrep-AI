@@ -42,3 +42,54 @@ export const APP_FEATURES = [
       "Maintain momentum with sophisticated session management, cross-device synchronization, and intelligent resume functionality—ensuring seamless preparation continuity.",
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "Software Engineer at Google",
+    content:
+      "CareerPrep AI helped me land my dream job! The role-specific questions were spot on.",
+    avatar: "SJ",
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Data Scientist at Meta",
+    content:
+      "The AI-powered explanations made complex algorithms so much easier to understand.",
+    avatar: "MC",
+  },
+  {
+    id: 3,
+    name: "Emily Rodriguez",
+    role: "Product Manager at Amazon",
+    content:
+      "Fantastic platform! The progressive learning approach really works.",
+    avatar: "ER",
+  },
+  {
+    id: 4,
+    name: "David Kim",
+    role: "Backend Developer at Netflix",
+    content:
+      "Best interview prep tool I've used. The organization features are incredible.",
+    avatar: "DK",
+  },
+  {
+    id: 5,
+    name: "Lisa Wang",
+    role: "Frontend Developer at Spotify",
+    content:
+      "The depth of analysis and real-world applications helped me understand concepts better.",
+    avatar: "LW",
+  },
+  {
+    id: 6,
+    name: "James Wilson",
+    role: "DevOps Engineer at Uber",
+    content:
+      "Session management across devices made my preparation seamless and efficient.",
+    avatar: "JW",
+  },
+];

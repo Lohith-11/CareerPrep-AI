@@ -10,6 +10,7 @@ import { LuSparkles } from "react-icons/lu";
 import { useContext } from "react";
 import { UserContext } from "../context/userContext";
 import ProfileInfoCard from "../components/Cards/ProfileInfoCard";
+import MarqueeDemo from "../components/MarqueeDemo";
 
 const LandingPage = () => {
   const { user } = useContext(UserContext);
@@ -96,6 +97,11 @@ const LandingPage = () => {
         </div>
 
         <div className="w-full min-h-full bg-[#FFFCEF] mt-10">
+          {/* Testimonials Marquee Section */}
+          <div className="container mx-auto px-4 py-16">
+            <MarqueeDemo />
+          </div>
+
           <div className="container mx-auto px-4 pt-10 pb-20">
             <section className="mt-5">
               <h2 className="text-2xl font-medium text-center mb-12">

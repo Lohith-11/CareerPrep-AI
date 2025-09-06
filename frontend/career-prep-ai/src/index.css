@@ -4,7 +4,7 @@
 @theme {
   --font-display: "Poppins", sans-serif;
   --breakpoint-3xl: 1920px;
-  --color-primary: #FF9324;
+  --color-primary: #ff9324;
 }
 
 @layer base {
@@ -91,6 +91,33 @@
   }
   .animate-blob3 {
     animation: blob3 12s ease-in-out infinite;
+  }
+
+  /* Marquee animations */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse var(--duration) linear infinite;
   }
 }
 
