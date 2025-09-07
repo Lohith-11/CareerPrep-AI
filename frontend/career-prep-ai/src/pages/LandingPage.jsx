@@ -13,6 +13,7 @@ import ProfileInfoCard from "../components/Cards/ProfileInfoCard";
 import MarqueeDemo from "../components/MarqueeDemo";
 import AnimatedGradientTextDemo from "../components/AnimatedGradientTextDemo";
 import { Highlighter } from "../components/magicui/Highlighter";
+import hero_image from "../assets/hero-image.png";
 
 const LandingPage = () => {
   const { user } = useContext(UserContext);
@@ -131,7 +132,7 @@ const LandingPage = () => {
         <div>
           <section className="flex items-center justify-center -mt-36">
             <img
-              src={HERO_IMG}
+              src={hero_image}
               alt="AI Interview Platform Dashboard"
               className="w-[80vw] rounded-lg"
             />
