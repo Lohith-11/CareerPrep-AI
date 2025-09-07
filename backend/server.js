@@ -19,8 +19,10 @@ const app = express();
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === "production" ? [process.env.FRONTEND_URL] : "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+      process.env.NODE_ENV === "production"
+        ? ["https://career-prep-ai-livid.vercel.app", process.env.FRONTEND_URL]
+        : "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
