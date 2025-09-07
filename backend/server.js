@@ -39,14 +39,14 @@ app.use("/api/questions", questionRoutes);
 app.use("/api/ai/generate-questions", protect, generateInterviewQuestions);
 app.use("/api/ai/generate-explanation", protect, generateConceptExplanation);
 
-//Serve uploads folder
-app.use("/uploads", express.static(path.join(__dirname, "uploads"), {}));
+//Serve uploads folder (removed - using Cloudinary now)
+// app.use("/uploads", express.static(path.join(__dirname, "uploads"), {}));
 
 // Health check endpoint
 app.get("/", (req, res) => {
-  res.status(200).json({ 
+  res.status(200).json({
     message: "CareerPrep AI Backend is running successfully!",
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 });
 
