@@ -18,14 +18,14 @@ const ProfileInfoCard = () => {
         <img
           src={user.profileImageUrl}
           alt=""
-          className="w-11 h-11 bg-gray-300 rounded-full mr-3"
+          className="w-10 h-10 bg-gray-200 rounded-full mr-3 object-cover border-2 border-gray-200"
         />
         <div>
-          <div className="text-[15px] text-black font-bold leading-3">
+          <div className="text-sm text-slate-900 font-semibold leading-4">
             {user.name || ""}
           </div>
           <button
-            className="text-amber-600 text-sm font-semibold cursor-pointer hover:underline"
+            className="text-blue-600 text-sm font-medium cursor-pointer hover:text-blue-700 transition-colors"
             onClick={handleLogout}
           >
             Logout

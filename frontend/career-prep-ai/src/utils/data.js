@@ -1,14 +1,14 @@
 export const CARD_BG = [
-  { id: 1, bgcolor: "linear-gradient(135deg,#e6f8f3 0%, #f7fcfa 100%)" },
-  { id: 2, bgcolor: "linear-gradient(135deg,#fef9e7 0%, #fffdf4 100%)" },
-  { id: 3, bgcolor: "linear-gradient(135deg,#eaf7ff 0%, #f3fbff 100%)" },
-  { id: 4, bgcolor: "linear-gradient(135deg,#fff2e9 0%, #fff8f3 100%)" },
-  { id: 5, bgcolor: "linear-gradient(135deg,#e7f6fe 0%, #f4fafd 100%)" },
-  { id: 6, bgcolor: "linear-gradient(135deg,#f5f5f5 0%, #fbfbfb 100%)" },
-  { id: 7, bgcolor: "linear-gradient(135deg,#fff4fc 0%, #fff8fd 100%)" },
-  { id: 8, bgcolor: "linear-gradient(135deg,#e8fef3 0%, #f5fef8 100%)" },
-  { id: 9, bgcolor: "linear-gradient(135deg,#f0ecff 0%, #f7f5ff 100%)" },
-  { id: 10, bgcolor: "linear-gradient(135deg,#fef2f2 0%, #fff8f8 100%)" },
+  { id: 1, bgcolor: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)" }, // Blue gradient
+  { id: 2, bgcolor: "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)" }, // Emerald gradient
+  { id: 3, bgcolor: "linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)" }, // Slate gradient
+  { id: 4, bgcolor: "linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)" }, // Sky gradient
+  { id: 5, bgcolor: "linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%)" }, // Green gradient
+  { id: 6, bgcolor: "linear-gradient(135deg, #FAFAFA 0%, #F4F4F5 100%)" }, // Neutral gradient
+  { id: 7, bgcolor: "linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%)" }, // Gray gradient
+  { id: 8, bgcolor: "linear-gradient(135deg, #EBF8FF 0%, #BFE6FF 100%)" }, // Light blue gradient
+  { id: 9, bgcolor: "linear-gradient(135deg, #F0FDF9 0%, #CCFBF1 100%)" }, // Teal gradient
+  { id: 10, bgcolor: "linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)" }, // Cool gray gradient
 ];
 export const APP_FEATURES = [
   {

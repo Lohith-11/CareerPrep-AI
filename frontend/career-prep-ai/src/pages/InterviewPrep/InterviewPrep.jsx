@@ -152,10 +152,12 @@ const InterviewPrep = () => {
         }
       />
 
-      <div className="container mx-auto pt-4 pb-4 px-4 md:px-0">
-        <h2 className="text-lg font-semibold color-black">Interview Q & A</h2>
+      <div className="container mx-auto pt-6 pb-4 px-4 md:px-0">
+        <h2 className="text-2xl font-semibold text-slate-900 mb-6">
+          Interview Q & A
+        </h2>
 
-        <div className="grid grid-cols-12 gap-4 mt-5 mb-10">
+        <div className="grid grid-cols-12 gap-6 mt-5 mb-10">
           <div
             className={`col-span-12 ${
               openLeanMoreDrawer ? "md:col-span-7" : "md:col-span-8"
@@ -192,9 +194,9 @@ const InterviewPrep = () => {
 
                       {!isLoading &&
                         sessionData?.questions?.length == index + 1 && (
-                          <div className="flex items-center justify-center mt-5">
+                          <div className="flex items-center justify-center mt-8">
                             <button
-                              className="flex items-center gap-3 test-sm text-white font-medium bg-black px-5 py-2 mr-2 rounded text-nowrap cursor-pointer"
+                              className="flex items-center gap-3 text-sm text-white font-medium bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg cursor-pointer transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                               disabled={isLoading || isUpdatedLoader}
                               onClick={uploadMoreQuestions}
                             >
@@ -203,7 +205,7 @@ const InterviewPrep = () => {
                               ) : (
                                 <LuListCollapse className="text-lg" />
                               )}{" "}
-                              Load More
+                              Load More Questions
                             </button>
                           </div>
                         )}
@@ -222,8 +224,8 @@ const InterviewPrep = () => {
             title={!isLoading && explanation?.title}
           >
             {errorMsg && (
-              <p className="flex gap-2 text-sm text-amber-600 font-medium">
-                <LuCircleAlert className="mt-1" /> {errorMsg}
+              <p className="flex gap-2 text-sm text-amber-600 font-medium bg-amber-50 p-3 rounded-lg border border-amber-200">
+                <LuCircleAlert className="mt-0.5 flex-shrink-0" /> {errorMsg}
               </p>
             )}
 

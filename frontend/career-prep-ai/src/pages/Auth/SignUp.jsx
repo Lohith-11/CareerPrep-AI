@@ -78,9 +78,11 @@ const SignUp = ({ setCurrentPage }) => {
     }
   };
   return (
-    <div className="w-[90vw] md:w-[33w] p-7 flex flex-col justify-center">
-      <h3 className="text-lg font-semibold text-black">Create an Account</h3>
-      <p className="text-xs text-slate-700 mt-[5px] mb-6">
+    <div className="w-full max-w-sm mx-auto p-6 flex flex-col justify-center">
+      <h3 className="text-2xl font-semibold text-slate-900">
+        Create an Account
+      </h3>
+      <p className="text-sm text-slate-600 mt-2 mb-6">
         Join us today by entering your details below.
       </p>
 
@@ -91,7 +93,7 @@ const SignUp = ({ setCurrentPage }) => {
             value={fullName}
             onChange={({ target }) => setFullName(target.value)}
             label="Full Name"
-            placeholder="John"
+            placeholder="John Doe"
             type="text"
           />
           <Input
@@ -109,14 +111,14 @@ const SignUp = ({ setCurrentPage }) => {
             type="password"
           />
         </div>
-        {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+        {error && <p className="text-red-500 text-sm pb-3 mt-2">{error}</p>}
         <button type="submit" className="btn-primary">
           SIGN UP
         </button>
-        <p className="text-[13px] text-slate-800 mt-3">
+        <p className="text-sm text-slate-600 mt-4 text-center">
           Already have an account?{" "}
           <button
-            className="font-medium text-pimary underline cursor-pointer"
+            className="font-medium text-blue-600 hover:text-blue-700 cursor-pointer transition-colors"
             onClick={() => setCurrentPage("login")}
           >
             Login

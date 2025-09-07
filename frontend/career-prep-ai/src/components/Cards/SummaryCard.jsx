@@ -15,16 +15,16 @@ const SummaryCard = ({
 }) => {
   return (
     <div
-      className=" bg-white border border-gray-300/40 rounded-xl p-2 overflow-hidden cursor-pointer hover:shadow-xl shadow-gray-100 relative group"
+      className="bg-white border border-gray-200 rounded-2xl p-2 overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-gray-100/50 transition-all duration-300 relative group hover:border-blue-300"
       onClick={onSelect}
     >
       <div
-        className="rounded-lg p-4 cursor-pointer relative"
+        className="rounded-xl p-6 cursor-pointer relative"
         style={{ background: colors.bgcolor }}
       >
         <div className="flex items-start">
-          <div className="flex-shrink-0 w-12 h-12 bg-white rounded-md flex items-center justify-center mr-4">
-            <span className="text-lg font-semibold text-black">
+          <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-sm">
+            <span className="text-lg font-semibold text-slate-900">
               {getInitials(role)}
             </span>
           </div>
@@ -34,16 +34,14 @@ const SummaryCard = ({
             <div className="flex justify-between items-center">
               {/* Title and Skills */}
               <div>
-                <h2 className="text-[17px] font-medium">{role}</h2>
-                <p className="text-xs text-medium text-gray-900">
-                  {topicsToFocus}
-                </p>
+                <h2 className="text-lg font-semibold text-slate-900">{role}</h2>
+                <p className="text-sm text-slate-600 mt-1">{topicsToFocus}</p>
               </div>
             </div>
           </div>
         </div>
         <button
-          className="hidden group-hover:flex items-center gap-2 text-xs text-rose-500 font-medium bg-rose-50 px-3 py-1 rounded text-nowrap border border-rose-100 hover:border-rose-200 cursor-pointer absolute top-0 right-0"
+          className="hidden group-hover:flex items-center gap-2 text-xs text-red-500 font-medium bg-red-50 px-3 py-1.5 rounded-lg text-nowrap border border-red-100 hover:border-red-200 hover:bg-red-100 cursor-pointer absolute top-4 right-4 transition-all duration-200"
           onClick={(e) => {
             e.stopPropagation();
             onDelete();
@@ -53,23 +51,23 @@ const SummaryCard = ({
         </button>
       </div>
 
-      <div className="px-3 pb-3">
-        <div className="flex items-center gap-3 mt-4">
-          <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">
+      <div className="px-4 pb-4">
+        <div className="flex items-center gap-2 mt-4 flex-wrap">
+          <div className="text-xs font-medium text-slate-700 px-3 py-1.5 border border-slate-300 rounded-full bg-slate-50">
             Experience: {experience} {experience > 1 ? "Years" : "Year"}
           </div>
 
-          <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">
+          <div className="text-xs font-medium text-slate-700 px-3 py-1.5 border border-slate-300 rounded-full bg-slate-50">
             {questions} Q&A
           </div>
 
-          <div className="text-[10px] font-medium text-black px-3 py-1 border-[0.5px] border-gray-900 rounded-full">
-            Last Updated: {lastUpdated}
+          <div className="text-xs font-medium text-slate-700 px-3 py-1.5 border border-slate-300 rounded-full bg-slate-50">
+            Updated: {lastUpdated}
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-[12px] text-gray-500 font-medium line-clamp-2 mt-3">
+        <p className="text-sm text-slate-600 font-normal line-clamp-2 mt-4 leading-relaxed">
           {description}
         </p>
       </div>

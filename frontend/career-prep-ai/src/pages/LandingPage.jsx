@@ -30,20 +30,20 @@ const LandingPage = () => {
   };
   return (
     <>
-      <div className="w-full min-h-full bg-[#FFFCEF]">
-        <div className="w-[500px] h-[500px] bg-amber-200/20 blur-[65px] absolute top-0 left-0 z-0" />
+      <div className="w-full min-h-full" style={{ backgroundColor: "#FAF9F6" }}>
+        <div className="w-[500px] h-[500px] bg-blue-200/20 blur-[65px] absolute top-0 left-0 z-0" />
         <div className="container mx-auto px-4 pt-6 pb-[200px] relative z-10">
           {/* header */}
           <header className="flex justify-between items-center mb-16">
-            <div className="text-xl text-black font-bold flex items-center">
-              <RiRobot3Fill size={29} />
+            <div className="text-xl text-slate-900 font-bold flex items-center">
+              <RiRobot3Fill size={29} className="text-blue-600" />
               CareerPrep AI
             </div>
             {user ? (
               <ProfileInfoCard />
             ) : (
               <button
-                className="bg-linear-to-r from-[#FF9324] to-[#e99a4b] text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-black hover:text-white border border-white transition-colors cursor-pointer"
+                className="bg-blue-600 text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-blue-700 border border-blue-600 hover:border-blue-700 transition-all duration-200 hover:shadow-lg"
                 onClick={() => setOpenAuthModal(true)}
               >
                 Login / Sign Up
@@ -59,9 +59,9 @@ const LandingPage = () => {
                   <AnimatedGradientTextDemo />
                 </div>
               </div>
-              <h1 className="text-5xl text-black font-medium mb-6 leading-tight">
+              <h1 className="text-5xl text-slate-900 font-medium mb-6 leading-tight">
                 Ace Interviews with <br />
-                <span className="text-transparent bg-clip-text bg-[radial-gradient(circle,_#FF9324_0%,_#FCD760_100%)] bg-[length:200%_200%] animate-text-shine font-semibold">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500 font-semibold">
                   AI-Powered
                 </span>{" "}
                 learning
@@ -69,21 +69,22 @@ const LandingPage = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <div className="text-[18px] text-gray-900 mr-0 md:mr-20 mb-6 leading-relaxed">
+              <div className="text-[18px] text-slate-700 mr-0 md:mr-20 mb-6 leading-relaxed">
                 <p className="mb-4">
                   Discover{" "}
-                  <Highlighter 
-                    action="highlight" 
-                    color="#FF9324" 
+                  <Highlighter
+                    action="highlight"
+                    color="#2563EB"
                     animationDuration={1500}
                   >
                     personalized, role-specific interview questions
                   </Highlighter>{" "}
-                  tailored to your dream job. Expand detailed answers whenever you need deeper insights, 
-                  explore complex concepts with comprehensive explanations, and{" "}
-                  <Highlighter 
-                    action="underline" 
-                    color="#FCD760" 
+                  tailored to your dream job. Expand detailed answers whenever
+                  you need deeper insights, explore complex concepts with
+                  comprehensive explanations, and{" "}
+                  <Highlighter
+                    action="underline"
+                    color="#10B981"
                     strokeWidth={3}
                     animationDuration={800}
                     iterations={2}
@@ -95,10 +96,11 @@ const LandingPage = () => {
                   .
                 </p>
                 <p>
-                  Whether you're just starting your preparation or fine-tuning for mastery, our{" "}
-                  <Highlighter 
-                    action="box" 
-                    color="#FF6B35" 
+                  Whether you're just starting your preparation or fine-tuning
+                  for mastery, our{" "}
+                  <Highlighter
+                    action="box"
+                    color="#64748B"
                     strokeWidth={2}
                     animationDuration={900}
                     iterations={1}
@@ -108,12 +110,13 @@ const LandingPage = () => {
                   >
                     comprehensive AI-powered interview toolkit
                   </Highlighter>{" "}
-                  adapts to your learning style and career goals. Experience the future of interview preparation — 
-                  intelligent, interactive, and incredibly effective.
+                  adapts to your learning style and career goals. Experience the
+                  future of interview preparation — intelligent, interactive,
+                  and incredibly effective.
                 </p>
               </div>
               <button
-                className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-50 hover:border-yellow-300 transition-colors cursor-pointer"
+                className="bg-slate-900 text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-blue-600 border border-slate-900 hover:border-blue-600 transition-all duration-200 hover:shadow-lg"
                 onClick={handleCTA}
               >
                 Get Started
@@ -135,7 +138,10 @@ const LandingPage = () => {
           </section>
         </div>
 
-        <div className="w-full min-h-full bg-[#FFFCEF] mt-10">
+        <div
+          className="w-full min-h-full mt-10"
+          style={{ backgroundColor: "#FAF9F6" }}
+        >
           {/* Testimonials Marquee Section */}
           <div className="container mx-auto px-4 py-16">
             <MarqueeDemo />
@@ -143,7 +149,7 @@ const LandingPage = () => {
 
           <div className="container mx-auto px-4 pt-10 pb-20">
             <section className="mt-5">
-              <h2 className="text-2xl font-medium text-center mb-12">
+              <h2 className="text-3xl font-semibold text-center mb-12 text-slate-900">
                 Features That Make You Shine
               </h2>
               <div className="flex flex-col items-center gap-8">
@@ -152,12 +158,14 @@ const LandingPage = () => {
                   {APP_FEATURES.slice(0, 3).map((feature, index) => (
                     <div
                       key={feature.id}
-                      className="bg-[#FFFEF8] p-6 rounded-xl shadow-xs hover:shadow-lg shadow-amber-100 transition border border-amber-100"
+                      className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300 group"
                     >
-                      <h3 className="text-base font-semibold mb-3">
+                      <h3 className="text-lg font-semibold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 ">{feature.description}</p>
+                      <p className="text-slate-600 leading-relaxed">
+                        {feature.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -167,12 +175,14 @@ const LandingPage = () => {
                   {APP_FEATURES.slice(3).map((feature) => (
                     <div
                       key={feature.id}
-                      className="bg-[#FFFEF8] p-6 rounded-xl shadow-xs hover:shadow-lg shadow-amber-100 transition border border-amber-100"
+                      className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300 group"
                     >
-                      <h3 className="text-base font-semibold mb-3">
+                      <h3 className="text-lg font-semibold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 ">{feature.description}</p>
+                      <p className="text-slate-600 leading-relaxed">
+                        {feature.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -181,8 +191,8 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="text-sm bg-gray-50 text-secondary text-center p-5 mt-5">
-          Made with ❤️ ... by CareerPrep Team
+        <div className="text-sm bg-white text-slate-600 text-center p-6 mt-5 border-t border-gray-200">
+          Made with ❤️ by CareerPrep Team
         </div>
       </div>
 

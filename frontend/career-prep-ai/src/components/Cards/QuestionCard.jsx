@@ -27,15 +27,15 @@ const QuestionCard = ({
   };
   return (
     <>
-      <div className="bg-white rounded-lg mb-4 overflow-hidden py-4 px-5 shadow-xl shadow-gray-100/70 border border-gray-100/60 group">
+      <div className="bg-white rounded-2xl mb-6 overflow-hidden py-6 px-6 shadow-sm hover:shadow-lg border border-gray-200 hover:border-blue-300 transition-all duration-300 group">
         <div className="flex items-start justify-between cursor-pointer">
-          <div className="flex items-start gap-3.5">
-            <span className="text-xs md:text-[15px] font-semibold text-gray-400 leading-[18px]">
+          <div className="flex items-start gap-4">
+            <span className="text-sm font-semibold text-blue-600 leading-5 flex-shrink-0 bg-blue-50 w-6 h-6 rounded-full flex items-center justify-center">
               Q
             </span>
 
             <h3
-              className="text-xs md:text-[14px] font-medium text-gray-800 mr-0 md:mr-20 "
+              className="text-sm font-medium text-slate-900 mr-0 md:mr-20 leading-relaxed hover:text-blue-600 transition-colors"
               onClick={toggleExpand}
             >
               {question}
@@ -44,12 +44,12 @@ const QuestionCard = ({
 
           <div className="flex items-center justify-end ml-4 relative">
             <div
-              className={`flex ${
+              className={`flex gap-2 ${
                 isExpanded ? "md:flex" : "md:hidden group-hover:flex"
               }`}
             >
               <button
-                className="flex items-center gap-2 text-xs text-indigo-800 font-medium bg-indigo-50 px-3 py-1 mr-2 rounded text-nowrap border border-indigo-50 hover:border-indigo-200 cursor-pointer"
+                className="flex items-center gap-2 text-xs text-slate-700 font-medium bg-slate-50 hover:bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200 hover:border-slate-300 cursor-pointer transition-all duration-200"
                 onClick={onTogglePin}
               >
                 {isPinned ? (
@@ -60,7 +60,7 @@ const QuestionCard = ({
               </button>
 
               <button
-                className="flex items-center gap-2 text-xs text-cyan-800 font-medium bg-cyan-50 px-3 py-1 mr-2 rounded text-nowrap border border-cyan-50 hover:border-cyan-200 cursor-pointer"
+                className="flex items-center gap-2 text-xs text-emerald-700 font-medium bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200 hover:border-emerald-300 cursor-pointer transition-all duration-200"
                 onClick={() => {
                   setIsExpanded(true);
                   onLearnMore();
@@ -72,7 +72,7 @@ const QuestionCard = ({
             </div>
 
             <button
-              className="text-gray-400 hover:text-gray-500 cursor-pointer"
+              className="text-slate-400 hover:text-slate-600 cursor-pointer ml-2 p-1 rounded-lg hover:bg-gray-100 transition-all duration-200"
               onClick={toggleExpand}
             >
               <LuChevronDown
@@ -91,7 +91,7 @@ const QuestionCard = ({
         >
           <div
             ref={contentRef}
-            className="mt-4 text-gray-700 bg-gray-50 px-5 py-3 rounded-lg"
+            className="mt-5 text-slate-700 bg-gray-50 px-6 py-4 rounded-xl border border-gray-100"
           >
             <AIResponsePreview content={answer} />
           </div>

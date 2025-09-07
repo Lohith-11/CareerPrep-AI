@@ -73,21 +73,21 @@ const CreateSessionForm = () => {
   };
 
   return (
-    <div className="w-[90vw] md:w-[35vw] p-7 flex flex-col justify-center">
-      <h3 className="text-lg font-semibold text-black">
+    <div className="w-full max-w-lg mx-auto p-6 flex flex-col justify-center">
+      <h3 className="text-2xl font-semibold text-slate-900">
         Start a New Interview Journey
       </h3>
-      <p className="text-xs text-slate-700 mt-[5px] mb-3">
+      <p className="text-sm text-slate-600 mt-2 mb-6">
         Fill out a few quick details and unlock your personalized set of
         interview questions!
       </p>
 
-      <form onSubmit={handleCreateSession} className="flex flex-col gap-3">
+      <form onSubmit={handleCreateSession} className="flex flex-col gap-4">
         <Input
           value={formData.role}
           onChange={({ target }) => handleChange("role", target.value)}
           label="Target Role"
-          placeholder="(e.g., Frontend Developer, UI/UX Designer, etc.)"
+          placeholder="e.g., Frontend Developer, UI/UX Designer, etc."
           type="text"
         />
 
@@ -95,7 +95,7 @@ const CreateSessionForm = () => {
           value={formData.experience}
           onChange={({ target }) => handleChange("experience", target.value)}
           label="Years of Experience"
-          placeholder="(e.g., 1 year, 3 years, 5+ years)"
+          placeholder="e.g., 1, 3, 5"
           type="number"
         />
 
@@ -103,23 +103,27 @@ const CreateSessionForm = () => {
           value={formData.topicsToFocus}
           onChange={({ target }) => handleChange("topicsToFocus", target.value)}
           label="Topics to Focus On"
-          placeholder="(Comma-separated, e.g., React, Node.js, MongoDB)"
+          placeholder="Comma-separated, e.g., React, Node.js, MongoDB"
           type="text"
         />
 
         <Input
           value={formData.description}
           onChange={({ target }) => handleChange("description", target.value)}
-          label="Description"
-          placeholder="(Any specific goals or notes for this session)"
+          label="Description (Optional)"
+          placeholder="Any specific goals or notes for this session"
           type="text"
         />
 
-        {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+        {error && (
+          <p className="text-red-500 text-sm pb-3 mt-2 bg-red-50 p-3 rounded-lg border border-red-200">
+            {error}
+          </p>
+        )}
 
         <button
           type="submit"
-          className="btn-primary w-full mt-2"
+          className="btn-primary w-full mt-4"
           disabled={isLoading}
         >
           {isLoading && <SpinnerLoader />} Create Session
