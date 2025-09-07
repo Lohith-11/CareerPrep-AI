@@ -17,7 +17,7 @@ const SignUp = ({ setCurrentPage }) => {
 
   const [error, setError] = useState(null);
 
-  const {updateUser}=useContext(UserContext);
+  const { updateUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   // Handle SignUp Form Submission
@@ -46,22 +46,22 @@ const SignUp = ({ setCurrentPage }) => {
     try {
       //Upload image if present
 
-      if(profilePic){
-        const imgUploadRes=await uploadImage(profilePic);
-        profileImageUrl=imgUploadRes.imageUrl || "";
+      if (profilePic) {
+        const imgUploadRes = await uploadImage(profilePic);
+        profileImageUrl = imgUploadRes.imageUrl || "";
       }
 
-      const response=await axiosInstance.post(API_PATHS.AUTH.REGISTER,{
-        name:fullName,
+      const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
+        name: fullName,
         email,
         password,
         profileImageUrl,
       });
 
-      const {token}=response.data;
+      const { token } = response.data;
 
-      if(token){
-        localStorage.setItem("token",token);
+      if (token) {
+        localStorage.setItem("token", token);
         updateUser(response.data);
         navigate("/dashboard");
       }
@@ -79,9 +79,7 @@ const SignUp = ({ setCurrentPage }) => {
   };
   return (
     <div className="w-[90vw] md:w-[33w] p-7 flex flex-col justify-center">
-      <h3 className="text-lg font-semibold text-black">
-        Create an Account
-      </h3>
+      <h3 className="text-lg font-semibold text-black">Create an Account</h3>
       <p className="text-xs text-slate-700 mt-[5px] mb-6">
         Join us today by entering your details below.
       </p>

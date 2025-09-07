@@ -12,6 +12,7 @@ import { UserContext } from "../context/userContext";
 import ProfileInfoCard from "../components/Cards/ProfileInfoCard";
 import MarqueeDemo from "../components/MarqueeDemo";
 import AnimatedGradientTextDemo from "../components/AnimatedGradientTextDemo";
+import { Highlighter } from "../components/magicui/Highlighter";
 
 const LandingPage = () => {
   const { user } = useContext(UserContext);
@@ -55,8 +56,8 @@ const LandingPage = () => {
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
               <div className="flex items-center justify-left mb-2">
                 <div>
-                  <AnimatedGradientTextDemo/>
-                </div> 
+                  <AnimatedGradientTextDemo />
+                </div>
               </div>
               <h1 className="text-5xl text-black font-medium mb-6 leading-tight">
                 Ace Interviews with <br />
@@ -68,12 +69,49 @@ const LandingPage = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <p className="text-[17px] text-gray-900 mr-0 md:mr-20 mb-6">
-                Get role-specific questions, expand answers when you need them,
-                dive deeper into concepts, and organize everything your way.
-                From preparation to mastery — your ultimate interview toolkit is
-                here.
-              </p>
+              <div className="text-[18px] text-gray-900 mr-0 md:mr-20 mb-6 leading-relaxed">
+                <p className="mb-4">
+                  Discover{" "}
+                  <Highlighter 
+                    action="highlight" 
+                    color="#FF9324" 
+                    animationDuration={1500}
+                  >
+                    personalized, role-specific interview questions
+                  </Highlighter>{" "}
+                  tailored to your dream job. Expand detailed answers whenever you need deeper insights, 
+                  explore complex concepts with comprehensive explanations, and{" "}
+                  <Highlighter 
+                    action="underline" 
+                    color="#FCD760" 
+                    strokeWidth={3}
+                    animationDuration={800}
+                    iterations={2}
+                    isView={true}
+                    padding={2}
+                  >
+                    organize your entire learning journey exactly how you prefer
+                  </Highlighter>
+                  .
+                </p>
+                <p>
+                  Whether you're just starting your preparation or fine-tuning for mastery, our{" "}
+                  <Highlighter 
+                    action="box" 
+                    color="#FF6B35" 
+                    strokeWidth={2}
+                    animationDuration={900}
+                    iterations={1}
+                    isView={true}
+                    padding={5}
+                    multiline={false}
+                  >
+                    comprehensive AI-powered interview toolkit
+                  </Highlighter>{" "}
+                  adapts to your learning style and career goals. Experience the future of interview preparation — 
+                  intelligent, interactive, and incredibly effective.
+                </p>
+              </div>
               <button
                 className="bg-black text-sm font-semibold text-white px-7 py-2.5 rounded-full hover:bg-yellow-100 hover:text-black border border-yellow-50 hover:border-yellow-300 transition-colors cursor-pointer"
                 onClick={handleCTA}

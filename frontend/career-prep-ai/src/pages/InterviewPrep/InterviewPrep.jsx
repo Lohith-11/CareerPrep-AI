@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import moment from "moment";
-import { AnimatePresence, motion, number } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { LuCircleAlert, LuListCollapse } from "react-icons/lu";
 import SpinnerLoader from "../../components/Loader/SpinnerLoader";
 import { toast } from "react-hot-toast";
@@ -13,6 +13,7 @@ import QuestionCard from "../../components/Cards/QuestionCard";
 import AIResponsePreview from "./components/AIResponsePreview";
 import Drawer from "../../components/Drawer";
 import SkeletonLoader from "../../components/Loader/SkeletonLoader";
+import { motion } from "framer-motion";
 
 const InterviewPrep = () => {
   const { sessionId } = useParams();
@@ -113,17 +114,17 @@ const InterviewPrep = () => {
         }
       );
 
-      if(response.data){
+      if (response.data) {
         toast.success("Added More Q&A!!");
         fetchSessionDetailsById();
       }
     } catch (error) {
-      if(error.response && error.response.data.message){
-        setError(error.response.data.message);
-      }else{
-        setError("Something went wrong. Please try again later.");
+      if (error.response && error.response.data.message) {
+        setErrorMsg(error.response.data.message);
+      } else {
+        setErrorMsg("Something went wrong. Please try again later.");
       }
-    }finally{
+    } finally {
       setIsUpdatedLoader(false);
     }
   };

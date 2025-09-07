@@ -30,9 +30,14 @@ const QuestionCard = ({
       <div className="bg-white rounded-lg mb-4 overflow-hidden py-4 px-5 shadow-xl shadow-gray-100/70 border border-gray-100/60 group">
         <div className="flex items-start justify-between cursor-pointer">
           <div className="flex items-start gap-3.5">
-            <span className="text-xs md:text-[15px] font-semibold text-gray-400 leading-[18px]">Q</span>
+            <span className="text-xs md:text-[15px] font-semibold text-gray-400 leading-[18px]">
+              Q
+            </span>
 
-            <h3 className="text-xs md:text-[14px] font-medium text-gray-800 mr-0 md:mr-20 " onClick={toggleExpand}>
+            <h3
+              className="text-xs md:text-[14px] font-medium text-gray-800 mr-0 md:mr-20 "
+              onClick={toggleExpand}
+            >
               {question}
             </h3>
           </div>
@@ -43,8 +48,15 @@ const QuestionCard = ({
                 isExpanded ? "md:flex" : "md:hidden group-hover:flex"
               }`}
             >
-              <button className="flex items-center gap-2 text-xs text-indigo-800 font-medium bg-indigo-50 px-3 py-1 mr-2 rounded text-nowrap border border-indigo-50 hover:border-indigo-200 cursor-pointer" onClick={onTogglePin}>
-                {isPinned ? <LuPinOff className="text-xs" /> : <LuPin className="text-xs" />}
+              <button
+                className="flex items-center gap-2 text-xs text-indigo-800 font-medium bg-indigo-50 px-3 py-1 mr-2 rounded text-nowrap border border-indigo-50 hover:border-indigo-200 cursor-pointer"
+                onClick={onTogglePin}
+              >
+                {isPinned ? (
+                  <LuPinOff className="text-xs" />
+                ) : (
+                  <LuPin className="text-xs" />
+                )}
               </button>
 
               <button
@@ -59,7 +71,10 @@ const QuestionCard = ({
               </button>
             </div>
 
-            <button className="text-gray-400 hover:text-gray-500 cursor-pointer" onClick={toggleExpand}>
+            <button
+              className="text-gray-400 hover:text-gray-500 cursor-pointer"
+              onClick={toggleExpand}
+            >
               <LuChevronDown
                 size={20}
                 className={`transform transition-transform duration-300 ${
@@ -70,9 +85,15 @@ const QuestionCard = ({
           </div>
         </div>
 
-        <div className="overflow-hidden transition-all duration-300 ease-in-out" style={{ maxHeight: `${height}px` }}>
-          <div ref={contentRef} className="mt-4 text-gray-700 bg-gray-50 px-5 py-3 rounded-lg">
-            <AIResponsePreview content={answer}/>
+        <div
+          className="overflow-hidden transition-all duration-300 ease-in-out"
+          style={{ maxHeight: `${height}px` }}
+        >
+          <div
+            ref={contentRef}
+            className="mt-4 text-gray-700 bg-gray-50 px-5 py-3 rounded-lg"
+          >
+            <AIResponsePreview content={answer} />
           </div>
         </div>
       </div>
